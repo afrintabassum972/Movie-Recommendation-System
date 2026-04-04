@@ -1,0 +1,16 @@
+# Streamlit secrets (Aapki API Key isi mein hai)
+.streamlit/
+
+# Python virtual environment (Ye folder bahut bada hota hai)
+.venv/
+venv/
+env/
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# OS related files
+.DS_Store
+Thumbs.db
+
