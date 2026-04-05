@@ -31,6 +31,6 @@ Since this project is hosted on GitHub, you can run it on your local machine by 
    ```bash
    git clone https://github.com
    cd Movie-Recommendation-System
-pip install -r requirements.txt
+'''pip install -r requirements.txt'''
 TMDB_API_KEY = "your_api_key_here"
 streamlit run app.py
