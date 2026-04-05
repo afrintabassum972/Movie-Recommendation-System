@@ -1,5 +1,4 @@
 # Movie Recommendation System 🎬
-
 ![Demo Screenshot](images/Screenshot.png)
 
 A Machine Learning-based web application that recommends the top 5 similar movies based on your selection. It uses **Content-Based Filtering** and a clean UI built with **Streamlit**.
