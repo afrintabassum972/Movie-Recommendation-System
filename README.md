@@ -1,41 +1,47 @@
 # Movie Recommendation System 🎬
 
-Ek machine learning based web application jo aapki pasandida movie ke basis par top 5 similar movies recommend karti hai. Ismein **Content-Based Filtering** ka use kiya gaya hai aur UI ke liye **Streamlit** ka istemal hua hai.
+A Machine Learning-based web application that recommends the top 5 similar movies based on your selection. It uses **Content-Based Filtering** and a clean UI built with **Streamlit**.
 
 ## ✨ Features
-*   **User-friendly Interface:** Streamlit ka upyog karke banaya gaya simple clean UI.
-*   **Accurate Recommendations:** Movie metadata ka use karke similar movies find karta hai.
-*   **Dynamic Posters:** TMDB API ka use karke real-time mein movie posters fetch karta hai.
+*   **User-friendly Interface:** Simple and clean UI built using Streamlit.
+*   **Accurate Recommendations:** Finds similar movies using movie metadata.
+*   **Dynamic Posters:** Fetches real-time movie posters using the TMDB API.
 
 ## 🛠️ Tech Stack
 *   **Language:** Python
 *   **Libraries:** Pandas, Scikit-learn, Streamlit, Requests, Pickle
-*   **API:** [The Movie Database (TMDB)](https://themoviedb.org)
+*   **Data Source:** [The Movie Database (TMDB)](https://themoviedb.org)
 
 ## 📁 Project Structure
 ```text
+├── .streamlit/
+│   └── secrets.toml      # API Keys (Ignore in Git)
 ├── app.py                # Main Streamlit application code
 ├── movie_dict.pkl        # Processed movie data dictionary
 ├── similarity.pkl        # Cosine similarity matrix
+├── requirements.txt      # List of dependencies
+├── .gitignore            # Files to ignore in Git
 └── README.md             # Project documentation
 ```
-## ⚙️ Setup Instruction
+## ⚙️ Setup Instructions
 
-1. **Dependencies Install Karein:**
-   Apne terminal ya command prompt mein niche di gayi command chalaein:
+1. **Install Dependencies:**
+   Run the following command in your terminal or command prompt:
    ```bash
    pip install streamlit pandas requests
 2. **API Key Setup:**
-   Apni TMDB API Key ko `.streamlit/secrets.toml` file mein is tarah likhein:
+   Add your TMDB API Key to the `.streamlit/secrets.toml` file as follows:
    ```toml
-   TMDB_API_KEY = "aapki_api_key_yahan_daalein"
-3. **App Run Karein:**
-   Project folder mein jaakar terminal mein likhein:
+   TMDB_API_KEY = "your_api_key_here"
+3. **Run the App:**
+   Navigate to the project folder and run this command in your terminal:
    ```bash
    streamlit run app.py
+4. **Data Preparation:**
+   Ensure that `movie_dict.pkl` and `similarity.pkl` are present in your project directory. If they are missing, run your data processing notebook to generate them.
 
 ## 🧠 How it Works?
-Jab aap koi movie select karte hain, toh system `similarity.pkl` file ka use karke us movie ke vectors aur baaki movies ke vectors ke beech ka **Cosine Similarity** (distance) nikaalta hai aur sabse kareebi 5 movies ko unke posters ke sath display karta hai.
+When you select a movie, the system uses the `similarity.pkl` file to calculate the **Cosine Similarity** (distance) between that movie's vector and all other movie vectors. It then displays the top 5 closest matches along with their posters fetched from the TMDB API.
 
 ---
 **Developed by [Afrin Tabassum]**
