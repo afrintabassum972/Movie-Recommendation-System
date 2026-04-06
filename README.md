@@ -19,13 +19,18 @@ The core of the system relies on pre-computed similarity scores (likely Cosine S
 ## 📁 Project Structure
 ```text
 ├── .streamlit/
-│   └── secrets.toml      # API Keys (Ignore in Git)
-├── app.py                # Main Streamlit application code
-├── movie_dict.pkl        # Processed movie data dictionary
-├── similarity.pkl        # Cosine similarity matrix
-├── requirements.txt      # List of dependencies
-├── .gitignore            # Files to ignore in Git
-└── README.md             # Project documentation
+│   └── secrets.toml       # API Keys (TMDB_API_KEY yahan add karein)
+├── data/                  # Raw datasets folder
+│   ├── tmdb_5000_movies.csv
+│   └── tmdb_5000_credits.csv
+├── app.py                 # Main Streamlit web application code
+├── movie_recommender.ipynb # Jupyter Notebook (Data cleaning & ML Modeling)
+├── movie_dict.pkl         # Cleaned movie data (Dictionary format)
+├── similarity.pkl         # Pre-computed Cosine Similarity matrix
+├── requirements.txt       # List of Python dependencies
+├── .gitignore             # Files to ignore in Git (jaise secrets.toml)
+└── README.md              # Project documentation
+
 ```
 ## ⚙️ Setup Instructions
 
